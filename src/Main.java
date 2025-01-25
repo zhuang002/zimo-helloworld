@@ -1,28 +1,21 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		
-		int a=70;
-		int b=30;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Please input a:");
+		int a=sc.nextInt();
+		System.out.print("Please input b:");
+		int b=sc.nextInt();
+		
 		int c = a+b;
-		System.out.print("120+30=");
-		System.out.println(c);
+		System.out.println("a is "+a+". b is "+b+". a+b="+c);
 		
-		System.out.println(a+"+"+b+"="+c);
 		
-		int d;
-		int e;
-		int f;
-		
-		d=20;
-		e=18;
-		f = d+e;
-		
-		String line;
-		line = d+"+"+e+"="+f;
-		System.out.println(line);
 
 	}
 
