@@ -15,7 +15,18 @@ public class Main {
 		int c = a+b;
 		System.out.println("a is "+a+". b is "+b+". a+b="+c);
 		
+		c = a-b;
+		System.out.println("a is "+a+". b is "+b+". a-b="+c);
 		
+		c = a*b;
+		System.out.println("a is "+a+". b is "+b+". a*b="+c);
+
+		c = a/b;
+		System.out.println("a is "+a+". b is "+b+". a/b="+c);
+
+		// a mod b = r; get remainder r by b devide by a. 
+		c = a % b;
+		System.out.println("a is "+a+". b is "+b+". a%b="+c);
 
 	}
 
