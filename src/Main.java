@@ -4,26 +4,46 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		
-		int a=70;
-		int b=30;
-		int c = a+b;
-		System.out.print("120+30=");
-		System.out.println(c);
+		String s = "asdfasfdsafsafdafasfdsa";
 		
-		System.out.println(a+"+"+b+"="+c);
+		// enumerate all chars in a string.
+		for (int i=0;i<s.length();i++) {
+			char c = s.charAt(i);
+			System.out.print(c+",");
+		}
+		System.out.println();
 		
-		int d;
-		int e;
-		int f;
+		// find a substring begin with an index;
+		s = "Tomorrow is Saturday";
+		String substr = s.substring(3);
+		System.out.println(substr);
 		
-		d=20;
-		e=18;
-		f = d+e;
+		// find a substring from index1 to index2;
+		substr = s.substring(4, 7);
+		System.out.println(substr);
 		
-		String line;
-		line = d+"+"+e+"="+f;
-		System.out.println(line);
-
+		// find a position of a substring.
+		int index = s.indexOf("row");
+		System.out.println("The index of 'row' is "+index);
+		
+		index = s.indexOf("aaa");
+		System.out.println("The index of 'aaa' is "+index);
+		
+		// find all indexes of a substring.
+		index = 0;
+		while (true) {
+			index = s.indexOf("o", index);
+			System.out.print(index+",");
+			if (index<0) 
+				break;
+			index++;
+		}
+		System.out.println();
+		
+		s = "A boy is a boy.";
+		
+		String s2 = s.replace("boy", "girl");
+		System.out.println(s2);
 	}
 
 }
