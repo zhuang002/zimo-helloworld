@@ -44,6 +44,12 @@ public class Main {
 		
 		String s2 = s.replace("boy", "girl");
 		System.out.println(s2);
+		
+		String[] sAr = s.split(" ");
+		for (int i=0;i<sAr.length;i++) {
+			System.out.print(sAr[i]+"|");
+		}
+		
 	}
 
 }
