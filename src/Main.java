@@ -1,28 +1,40 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Hello World!");
 		
-		int a=70;
-		int b=30;
-		int c = a+b;
-		System.out.print("120+30=");
-		System.out.println(c);
+		Scanner sc = new Scanner(System.in);
 		
-		System.out.println(a+"+"+b+"="+c);
+		String type = sc.nextLine(); // read in the type to be converted: I for integer, D for double, B for boolean
+		// H for hex, O for oct, 
 		
-		int d;
-		int e;
-		int f;
+		String line = sc.nextLine();
 		
-		d=20;
-		e=18;
-		f = d+e;
+		String[] numbers = line.split(",");
 		
-		String line;
-		line = d+"+"+e+"="+f;
-		System.out.println(line);
+		for (int i=0;i<numbers.length;i++) {
+			String data = numbers[i];
+			char c = type.charAt(0);
+			if (c == 'I') {
+				int ii = Integer.parseInt(data);
+				System.out.print(ii + "|");
+			} else if (c == 'D') {
+				double dd = Double.parseDouble(data);
+				System.out.print(dd+"|");
+			} else if (c == 'B') {
+				boolean bb = Boolean.parseBoolean(data);
+				System.out.print(bb+"|");
+			} else if (c == 'H') {
+				int ii = Integer.parseInt(data,16);
+				System.out.print(ii + "|");
+			} else if (c == 'O') {
+				int ii = Integer.parseInt(data, 8);
+				System.out.print(ii+"|");
+				
+			}
+		}
 
 	}
 
